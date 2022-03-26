@@ -1,0 +1,901 @@
+#enhanced-content-component #steps .step-text p img,#enhanced-content-component .final-answers p img,#enhanced-content-component .step-answer p img {
+	max-width: 100%
+}
+
+#enhanced-content-component .caret:before,.icon-chegg-box:before,.icon-chegg-circle:before,.icon-chegg:before,.icon-cheggbooks-logo:before,.icon-cheggcolleges-logo:before,.icon-chegginternships-logo:before,.icon-cheggmathsolver-logo:before,.icon-cheggstudy-logo:before,.icon-cheggtestprep-act-logo:before,.icon-cheggtestprep-ap-logo:before,.icon-cheggtestprep-asvab-logo:before,.icon-cheggtestprep-gmat-logo:before,.icon-cheggtestprep-gre-logo:before,.icon-cheggtestprep-logo:before,.icon-cheggtestprep-lsat-logo:before,.icon-cheggtestprep-mcat-logo:before,.icon-cheggtestprep-nclexpn-logo:before,.icon-cheggtestprep-nclexrn-logo:before,.icon-cheggtestprep-sat-logo:before,.icon-cheggtutors-logo:before,.icon-cheggwriting-logo:before,[class*=" icon-chegg-"]:before,[class^=icon-chegg]:before {
+	font-family: Chegg-icon!important;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "\61"
+}
+
+.icon-chegg-box,.icon-chegg-circle {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	color: #EB7100;
+	font-size: 48px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.icon-chegg-box:before,.icon-chegg-circle:before {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 0;
+	top: 50%;
+	margin-top: -24px
+}
+
+.icon-chegg-circle {
+	width: 96px;
+	height: 96px;
+	border: 2px solid #EB7100;
+	-webkit-border-radius: 50% 50%;
+	border-radius: 50%
+}
+
+.icon-cheggmathsolver-logo:before {
+	content: "\e932"
+}
+
+.icon-cheggwriting-logo:before {
+	content: "\e933"
+}
+
+.icon-chegg-logo:before {
+	content: "\e900"
+}
+
+.icon-cheggbooks-logo:before {
+	content: "\e901"
+}
+
+.icon-cheggcolleges-logo:before {
+	content: "\e903"
+}
+
+.icon-chegginternships-logo:before {
+	content: "\e905"
+}
+
+.icon-cheggstudy-logo:before {
+	content: "\e907"
+}
+
+.icon-cheggtestprep-logo:before {
+	content: "\e909"
+}
+
+.icon-cheggtutors-logo:before {
+	content: "\e90b"
+}
+
+.icon-cheggtestprep-act-logo:before {
+	content: "\e91f"
+}
+
+.icon-cheggtestprep-ap-logo:before {
+	content: "\e924"
+}
+
+.icon-cheggtestprep-asvab-logo:before {
+	content: "\e925"
+}
+
+.icon-cheggtestprep-gmat-logo:before {
+	content: "\e926"
+}
+
+.icon-cheggtestprep-gre-logo:before {
+	content: "\e927"
+}
+
+.icon-cheggtestprep-lsat-logo:before {
+	content: "\e929"
+}
+
+.icon-cheggtestprep-mcat-logo:before {
+	content: "\e92a"
+}
+
+.icon-cheggtestprep-nclexpn-logo:before {
+	content: "\e92d"
+}
+
+.icon-cheggtestprep-nclexrn-logo:before {
+	content: "\e92b"
+}
+
+.icon-cheggtestprep-sat-logo:before {
+	content: "\e92e"
+}
+
+.icon-chegg-home-c:before,.icon-chegg-home_c:before {
+	content: "\e91d"
+}
+
+.icon-chegg-hamburger:before {
+	content: "\e90d"
+}
+
+.icon-chegg-study2:before {
+	content: "\e90e"
+}
+
+.icon-chegg-solutions_icon:before {
+	content: "\e90f"
+}
+
+.icon-chegg-books:before {
+	content: "\e910"
+}
+
+.icon-chegg-buyback:before {
+	content: "\e911"
+}
+
+.icon-chegg-tutors-person:before {
+	content: "\e912"
+}
+
+.icon-chegg-Profile:before {
+	content: "\e913"
+}
+
+.icon-chegg-quickchat:before {
+	content: "\e914"
+}
+
+.icon-chegg-QA:before {
+	content: "\e915"
+}
+
+.icon-chegg-notifications:before {
+	content: "\e916"
+}
+
+.icon-chegg-quote:before {
+	content: "\e917"
+}
+
+.icon-chegg-question:before {
+	content: "\e918"
+}
+
+.icon-chegg-etb-courtesy:before {
+	content: "\e919"
+}
+
+.icon-chegg-etb:before {
+	content: "\e91a"
+}
+
+.icon-chegg-textbooks_solutions:before {
+	content: "\e91b"
+}
+
+.icon-chegg-returnbook2:before {
+	content: "\e91c"
+}
+
+.icon-chegg-satisfaction_guarantee:before {
+	content: "\e91e"
+}
+
+.icon-chegg-career:before {
+	content: "\e920"
+}
+
+.icon-icn-info-large:before {
+	content: "\e921"
+}
+
+.icon-chegg-colleges2:before {
+	content: "\e922"
+}
+
+.icon-chegg-flag:before {
+	content: "\e923"
+}
+
+.icon-icn-error-large:before {
+	content: "\e928"
+}
+
+.icon-icn-success-large:before {
+	content: "\e92c"
+}
+
+.icon-chegg-support:before {
+	content: "\e934"
+}
+
+.icon-chegg-undo:before {
+	content: "\e935"
+}
+
+.icon-chegg-view:before {
+	content: "\e936"
+}
+
+.icon-chegg-Deal:before {
+	content: "\e937"
+}
+
+.icon-chegg-donate_tree:before {
+	content: "\e938"
+}
+
+.icon-chegg-Camera:before {
+	content: "\e939"
+}
+
+.icon-chegg-Creditcard:before {
+	content: "\e93a"
+}
+
+.icon-chegg-envelope:before {
+	content: "\e93b"
+}
+
+.icon-chegg-plus:before {
+	content: "\e93c"
+}
+
+.icon-chegg-cancel:before {
+	content: "\e93d"
+}
+
+.icon-chegg-Check:before {
+	content: "\e93e"
+}
+
+#enhanced-content-component .caret:before,.icon-chegg-chevron:before {
+	content: "\e93f"
+}
+
+.icon-chegg-Colleges:before {
+	content: "\e940"
+}
+
+.icon-chegg-open:before {
+	content: "\e941"
+}
+
+.icon-chegg-Lock:before {
+	content: "\e942"
+}
+
+.icon-chegg-edit:before {
+	content: "\e943"
+}
+
+.icon-chegg-trash:before {
+	content: "\e944"
+}
+
+.icon-chegg-search:before {
+	content: "\e945"
+}
+
+.icon-chegg-TestPrep:before {
+	content: "\e946"
+}
+
+.icon-chegg-cart:before {
+	content: "\e947"
+}
+
+.icon-chegg-bookmark:before {
+	content: "\e951"
+}
+
+.icon-chegg-link:before {
+	content: "\e906"
+}
+
+.icon-chegg-share:before {
+	content: "\e908"
+}
+
+.icon-chegg-facebook:before {
+	content: "\e90a"
+}
+
+.icon-chegg-twitter:before {
+	content: "\e950"
+}
+
+.icon-chegg-library:before {
+	content: "\e90c"
+}
+
+.icon-chegg-all-matches:before {
+	content: "\e902"
+}
+
+.icon-chegg-math-solver:before {
+	content: "\e904"
+}
+
+.icon-chegg-writing:before {
+	content: "\e92f"
+}
+
+.icon-chegg-receipt:before {
+	content: "\e930"
+}
+
+.icon-chegg-overview:before {
+	content: "\e931"
+}
+
+.icon-chegg-info:before {
+	content: "\e949"
+}
+
+.icon-chegg-study-pack:before {
+	content: "\e948"
+}
+
+.icon-chegg-email-sent:before {
+	content: "\e94a"
+}
+
+.icon-cheggprep-logo:before {
+	content: "\e94b"
+}
+
+.icon-chegg-flashcards:before {
+	content: "\e94c"
+}
+
+a[data-type=button],button,input[type=image],input[type=submit],label[data-type=button] {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	text-transform: none;
+	white-space: nowrap;
+	font-family: Aspira-Bold,Helvetica,Arial,Sans-serif;
+	font-weight: initial;
+	border-width: 2px;
+	border-style: solid
+}[data-type=button],[type=image],[type=submit],button {
+	border-color: transparent
+}
+
+a[data-type=button],label[data-type=button] {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+a[data-type=button]:hover {
+	text-decoration: none
+}
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0
+}
+
+a[data-type=button]:active:not([disabled]),button:active:not([disabled]),input[type=submit]:active:not([disabled]) {
+	transform: translateY(2px)
+}
+
+a[data-type=button][disabled],button[disabled],input[type=submit][disabled] {
+	cursor: default;
+	opacity: .25
+}
+
+.btn-flat-lg,.btn-lg,.btn-outline-lg,.btn-primary-lg,.btn-search-lg,.btn-secondary-dk-lg,.btn-secondary-lg {
+	height: 44px;
+	line-height: 44px;
+	line-height: 0\9;
+	border-radius: 8px;
+	font-size: 20px;
+	padding: 0 40px
+}
+
+.btn-flat-sm,.btn-outline-sm,.btn-primary-sm,.btn-search-sm,.btn-secondary-dk-sm,.btn-secondary-flat,.btn-secondary-sm,.btn-sm {
+	height: 34px;
+	line-height: 34px;
+	border-radius: 6px;
+	font-size: 20px;
+	padding: 0 30px
+}
+
+.btn-flat-mini,.btn-mini,.btn-outline-mini,.btn-primary-mini,.btn-search-mini,.btn-secondary-dk-mini,.btn-secondary-mini {
+	height: 30px;
+	line-height: 30px;
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 0 20px
+}
+
+.btn-primary,.btn-primary-lg,.btn-primary-sm,.btn-search-lg,.btn-search-sm,.btn-secondary-dk-lg,.btn-secondary-dk-sm {
+	border-color: #21A29D;
+	background-color: #21A29D;
+	color: #FFF
+}
+
+.btn-primary-lg:active:not([disabled]),.btn-primary-lg:hover:not([disabled]),.btn-primary-sm:active:not([disabled]),.btn-primary-sm:hover:not([disabled]),.btn-primary:active:not([disabled]),.btn-primary:hover:not([disabled]),.btn-search-lg:active:not([disabled]),.btn-search-lg:hover:not([disabled]),.btn-search-sm:active:not([disabled]),.btn-search-sm:hover:not([disabled]),.btn-secondary-dk-lg:active:not([disabled]),.btn-secondary-dk-lg:hover:not([disabled]),.btn-secondary-dk-sm:active:not([disabled]),.btn-secondary-dk-sm:hover:not([disabled]) {
+	border-color: #188e87;
+	background-color: #188e87
+}
+
+.btn-primary-outline {
+	border-color: #21A29D;
+	background-color: rgba(255,255,255,0);
+	color: #21A29D
+}
+
+.btn-primary-outline:active:not([disabled]),.btn-primary-outline:hover:not([disabled]) {
+	background-color: rgba(44,174,166,.1)
+}
+
+.btn-special {
+	border-color: #EB7100;
+	background-color: #EB7100;
+	color: #FFF
+}
+
+.btn-special:active:not([disabled]),.btn-special:hover:not([disabled]) {
+	border-color: #d46e00;
+	background-color: #d46e00
+}
+
+.btn-special-outline {
+	border-color: #EB7100;
+	background-color: rgba(255,255,255,0);
+	color: #EB7100
+}
+
+.btn-special-outline:active:not([disabled]),.btn-special-outline:hover:not([disabled]) {
+	background-color: rgba(240,124,0,.1)
+}
+
+.btn-flat-lg,.btn-flat-mini,.btn-flat-sm,.btn-primary-mini,.btn-primary.btn-mini,.btn-search-mini,.btn-secondary,.btn-secondary-dk-mini,.btn-secondary-flat,.btn-secondary-lg,.btn-secondary-mini,.btn-secondary-sm,.btn-special.btn-mini {
+	border-color: #ddd;
+	background-color: #ddd;
+	color: #555
+}
+
+.btn-flat-lg:active:not([disabled]),.btn-flat-lg:hover:not([disabled]),.btn-flat-mini:active:not([disabled]),.btn-flat-mini:hover:not([disabled]),.btn-flat-sm:active:not([disabled]),.btn-flat-sm:hover:not([disabled]),.btn-primary-mini:active:not([disabled]),.btn-primary-mini:hover:not([disabled]),.btn-primary.btn-mini:active:not([disabled]),.btn-primary.btn-mini:hover:not([disabled]),.btn-search-mini:active:not([disabled]),.btn-search-mini:hover:not([disabled]),.btn-secondary-dk-mini:active:not([disabled]),.btn-secondary-dk-mini:hover:not([disabled]),.btn-secondary-flat:active:not([disabled]),.btn-secondary-flat:hover:not([disabled]),.btn-secondary-lg:active:not([disabled]),.btn-secondary-lg:hover:not([disabled]),.btn-secondary-mini:active:not([disabled]),.btn-secondary-mini:hover:not([disabled]),.btn-secondary-sm:active:not([disabled]),.btn-secondary-sm:hover:not([disabled]),.btn-secondary:active:not([disabled]),.btn-secondary:hover:not([disabled]),.btn-special.btn-mini:active:not([disabled]),.btn-special.btn-mini:hover:not([disabled]) {
+	border-color: #CCC;
+	background-color: #CCC
+}
+
+.btn-outline-lg,.btn-outline-mini,.btn-outline-sm,.btn-primary-outline.btn-mini,.btn-secondary-outline,.btn-special-outline.btn-mini {
+	border-color: #ddd;
+	background-color: rgba(255,255,255,0);
+	color: #555
+}
+
+.btn-outline-lg:active:not([disabled]),.btn-outline-lg:hover:not([disabled]),.btn-outline-mini:active:not([disabled]),.btn-outline-mini:hover:not([disabled]),.btn-outline-sm:active:not([disabled]),.btn-outline-sm:hover:not([disabled]),.btn-primary-outline.btn-mini:active:not([disabled]),.btn-primary-outline.btn-mini:hover:not([disabled]),.btn-secondary-outline:active:not([disabled]),.btn-secondary-outline:hover:not([disabled]),.btn-special-outline.btn-mini:active:not([disabled]),.btn-special-outline.btn-mini:hover:not([disabled]) {
+	background-color: rgba(221,221,221,.25)
+}
+
+.btn-white {
+	border-color: #FFF;
+	background-color: #FFF;
+	color: #555
+}
+
+.btn-white:active:not([disabled]),.btn-white:hover:not([disabled]) {
+	border-color: #EEE;
+	background-color: #EEE
+}
+
+.btn-white-outline {
+	border-color: #FFF;
+	background-color: rgba(255,255,255,0);
+	color: #FFF
+}
+
+.btn-white-outline:active:not([disabled]),.btn-white-outline:hover:not([disabled]) {
+	background-color: rgba(255,255,255,.2)
+}
+
+button.icon {
+	padding: 0 10px
+}
+
+button.icon>* {
+	display: inline-block;
+	vertical-align: middle
+}
+
+button[data-type=iconOnly] {
+	padding: 0 10px;
+	line-height: normal;
+	vertical-align: top
+}
+
+#enhanced-content-component {
+	font-family: Aspira,Helvetica,Arial,Sans-serif;
+	color: #333;
+	position: relative
+}
+
+#enhanced-content-component .guidance-header,#enhanced-content-component .guidance-title,#enhanced-content-component .step-header,#enhanced-content-component .steps-header {
+	font-family: Aspira-Medium,Helvetica,Arial,Sans-serif
+}
+
+#enhanced-content-component h3,#enhanced-content-component p {
+	margin: 0;
+	font-weight: 400
+}
+
+#enhanced-content-component b {
+	font-weight: 700
+}
+
+#enhanced-content-component .caret {
+	display: inline-block;
+	-webkit-transform: rotate(0) translateX(0);
+	-moz-transform: rotate(0) translateX(0);
+	-ms-transform: rotate(0) translateX(0);
+	-o-transform: rotate(0) translateX(0);
+	transform: rotate(0) translateX(0)
+}
+
+#enhanced-content-component .caret:before {
+	font-size: 8px
+}
+
+#enhanced-content-component .caret.open {
+	-webkit-transform: rotate(180deg) translateX(0);
+	-moz-transform: rotate(180deg) translateX(0);
+	-ms-transform: rotate(180deg) translateX(0);
+	-o-transform: rotate(180deg) translateX(0);
+	transform: rotate(180deg) translateX(0);
+	position: relative;
+	top: -1px;
+	left: 1px
+}
+
+#enhanced-content-component .guidance-header,#enhanced-content-component .steps-header {
+	color: #767676;
+	font-size: 24px;
+	margin: 0;
+	text-align: center
+}
+
+#enhanced-content-component .guidance-header {
+	margin: 15px 0 0
+}
+
+#enhanced-content-component #general-guidance {
+	border: 1px solid #DDD;
+	padding: 20px;
+	font-size: 14px;
+	margin-bottom: 20px;
+	position: relative;
+	height: 190px;
+	overflow: hidden
+}
+
+#enhanced-content-component #general-guidance:before {
+	content: '';
+	width: 100%;
+	height: 230px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background-image: -owg-linear-gradient(rgba(255,255,255,0),#FFF 77%);
+	background-image: -webkit-linear-gradient(rgba(255,255,255,0),#FFF 77%);
+	background-image: -moz-linear-gradient(rgba(255,255,255,0),#FFF 77%);
+	background-image: -o-linear-gradient(rgba(255,255,255,0),#FFF 77%);
+	background-image: linear-gradient(rgba(255,255,255,0),#FFF 77%)
+}
+
+#enhanced-content-component #general-guidance.visible:before {
+	background: 0 0
+}
+
+#enhanced-content-component #general-guidance.viewable {
+	height: 100%;
+	padding-bottom: 5px;
+	overflow-x: auto
+}
+
+#enhanced-content-component .guidance-title {
+	font-size: 16px;
+	margin-bottom: 5px
+}
+
+#enhanced-content-component .guidance-title:not(:first-of-type) {
+	margin-top: 20px
+}
+
+#enhanced-content-component #show-more {
+	color: #007C8A;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	top: 195px;
+	left: 50%;
+	margin-left: -40px;
+	z-index: 2
+}
+
+#enhanced-content-component #show-more .caret {
+	margin-left: 2px
+}
+
+#enhanced-content-component #show-more.show-less {
+	color: #4A807A;
+	position: static;
+	margin: 25px 0 15px
+}
+
+#enhanced-content-component #select-view {
+	text-transform: uppercase;
+	color: #767676;
+	font-size: 12px;
+	position: absolute;
+	right: 5px;
+	margin-top: 10px
+}
+
+#enhanced-content-component #view-all,#enhanced-content-component #view-answer,#enhanced-content-component #view-first {
+	cursor: pointer
+}
+
+#enhanced-content-component #view-all.highlight,#enhanced-content-component #view-answer.highlight,#enhanced-content-component #view-first.highlight {
+	color: #333;
+	font-weight: 700
+}
+
+#enhanced-content-component #steps {
+	border: 1px solid #DDD;
+	font-size: 14px
+}
+
+#enhanced-content-component #steps>div {
+	border-bottom: 1px dashed #DDD
+}
+
+#enhanced-content-component #steps>div:last-of-type {
+	border-bottom: none
+}
+
+#enhanced-content-component #steps .expl-content,#enhanced-content-component #steps .expl-key,#enhanced-content-component #steps .hint-content,#enhanced-content-component #steps .mistakes-content {
+	padding-left: 20px
+}
+
+#enhanced-content-component #steps img:not(.step-obfus) {
+	position: relative;
+	top: 4px
+}
+
+#enhanced-content-component #steps .step-text {
+	padding: 0 20px
+}
+
+#enhanced-content-component #steps .step-content {
+	overflow-x: auto
+}
+
+#enhanced-content-component .step-wrapper .caret[data-number="1"] {
+	-webkit-transform: rotate(180deg) translateX(0);
+	-moz-transform: rotate(180deg) translateX(0);
+	-ms-transform: rotate(180deg) translateX(0);
+	-o-transform: rotate(180deg) translateX(0);
+	transform: rotate(180deg) translateX(0);
+	position: relative;
+	top: -2px;
+	left: 10px
+}
+
+#enhanced-content-component .steps-header {
+	margin-bottom: 5px
+}
+
+#enhanced-content-component .step-header {
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 15px 0
+}
+
+#enhanced-content-component .step-header .caret.open {
+	position: relative;
+	left: 10px;
+	top: -2px
+}
+
+#enhanced-content-component .step-header .caret:before {
+	font-size: 9px;
+	margin-left: 10px;
+	color: #767676
+}
+
+#enhanced-content-component .total-steps {
+	color: #767676;
+	font-family: Aspira,Helvetica,Arial,Sans-serif
+}
+
+#enhanced-content-component .step-keys {
+	color: #767676
+}
+
+#enhanced-content-component .expl-key,#enhanced-content-component .hint-key,#enhanced-content-component .mistakes-key {
+	cursor: pointer;
+	margin: 20px 0 10px;
+	display: inline-block;
+	color: #767676
+}
+
+#enhanced-content-component .expl-key.highlight,#enhanced-content-component .hint-key.highlight,#enhanced-content-component .mistakes-key.highlight {
+	color: #333;
+	font-weight: 700
+}
+
+#enhanced-content-component .expl-content,#enhanced-content-component .hint-content,#enhanced-content-component .mistakes-content {
+	position: relative;
+	background-color: #fff;
+	margin-bottom: 15px;
+	padding: 0 20px
+}
+
+#enhanced-content-component .hidden {
+	display: none
+}
+
+#enhanced-content-component .step-answer {
+	background-color: #F5F5F5;
+	padding: 12px;
+	margin: 20px 20px 5px;
+	display: inline-block
+}
+
+#enhanced-content-component #answers .answer-header,#enhanced-content-component .answer-header {
+	margin-top: 0;
+	font-family: Aspira-Medium,Helvetica,Arial,Sans-serif
+}
+
+#enhanced-content-component #answers .answer-only:not(:last-of-type),#enhanced-content-component .final-answer:not(:last-of-type) {
+	margin-bottom: 10px
+}
+
+#enhanced-content-component .answer-header {
+	text-align: center;
+	font-size: 16px;
+	border-top: 1px dashed #DDD;
+	padding-top: 10px
+}
+
+#enhanced-content-component .final-answers {
+	padding: 0 20px 15px;
+	display: inline-block
+}
+
+#enhanced-content-component #answers {
+	font-size: 14px;
+	padding: 0 20px 15px;
+	border: 1px solid #DDD;
+	overflow-x: auto
+}
+
+#enhanced-content-component #answers .answer-header {
+	border-top: none;
+	padding-top: 15px
+}
+
+#enhanced-content-component.non-sub-view #answers,#enhanced-content-component.non-sub-view #select-view,#enhanced-content-component.non-sub-view #steps .caret,#enhanced-content-component.non-sub-view .answer-header,#enhanced-content-component.non-sub-view .final-answers {
+	display: none
+}
+
+#enhanced-content-component.non-sub-view .step-header {
+	cursor: default
+}
+
+#enhanced-content-component.non-sub-view .step-wrapper:not([data-number="1"]) .step-content {
+	display: inherit
+}
+
+#enhanced-content-component .step-obfus {
+	width: 100%
+}
+
+#enhanced-content-component .see-all-steps {
+	text-align: center;
+	cursor: pointer;
+	color: #007C8A;
+	padding: 20px 0;
+	border-top: 1px dashed #DDD
+}
+
+#enhanced-content-component #obfuscated-step.step-wrapper {
+	padding-bottom: 0
+}
+
+#enhanced-content-component .new-flag {
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: 3px
+}
+
+#enhanced-content-component .new-flag:last-of-type {
+	margin-left: -125px
+}
+
+#enhanced-content-component .onboard-view {
+	position: absolute;
+	right: 47%;
+	top: 30px
+}
+
+#enhanced-content-component .onboard-step {
+	position: absolute;
+	left: 35px
+}
+
+.katex .overlay,.katex-display .overlay {
+	position: static
+}
+
+.latex-patches .katex-display {
+	text-align: left;
+	margin: 0
+}
+
+.latex-patches .katex-html>.strut {
+	display: none
+}
+
+.latex-patches .katex-html>.strut+.base {
+	display: -webkit-flex;
+	display: flex;
+	align-items: center
+}
+
+.latex-patches .base .minner {
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	align-items: center
+}
+
+.latex-patches .mtable>.arraycolsep:first-child {
+	width: 0!important
+}
+
+.latex-patches .col-align-c>.vlist-t2>.vlist-r>.vlist,.latex-patches .col-align-l>.vlist-t2>.vlist-r>.vlist {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	position: static;
+	height: auto!important
+}
+
+.latex-patches .col-align-c>.vlist-t2>.vlist-r>.vlist>span,.latex-patches .col-align-l>.vlist-t2>.vlist-r>.vlist>span {
+	position: static;
+	height: auto;
+	padding: .5em 0
+}
+
+.latex-patches .col-align-c>.vlist-t2>.vlist-r>.vlist>span>.pstrut,.latex-patches .col-align-l>.vlist-t2>.vlist-r>.vlist>span>.pstrut {
+	height: 0!important
+}
+
+.latex-patches .col-align-c>.vlist-t2>.vlist-r>.vlist>span .mfrac,.latex-patches .col-align-l>.vlist-t2>.vlist-r>.vlist>span .mfrac {
+	font-size: 1.3em
+}
+
+.latex-patches .col-align-c>.vlist-t2>.vlist-r>.vlist>span .mfrac .mfrac,.latex-patches .col-align-l>.vlist-t2>.vlist-r>.vlist>span .mfrac .mfrac {
+	font-size: 1em
+}
