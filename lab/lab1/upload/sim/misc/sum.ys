@@ -1,0 +1,54 @@
+# 函数执行开始地址为0
+        .pos    0
+ init:  irmovl  Stack, %esp
+        irmovl  Stack, %ebp
+        call    Main
+        halt
+
+ # Sample linked list 函数操作中需要运用到的数据定义
+        .align  4
+ ele1:  
+        .long   0x00a
+        .long   ele2
+ ele2:  
+        .long   0x0b0
+        .long   ele3
+ele3:   
+        .long    0xc00
+        .long   0
+
+#定义Main函数，调用sum_list函数
+Main:   pushl   %ebp
+        rrmovl  %esp,   %ebp
+        irmovl  ele1 ,  %eax
+        pushl   %eax
+        call    sumlist
+        rrmovl  %ebp , %esp
+        popl    %ebp
+        ret
+
+# int sum_list(list_ptr ls) 相关sum_list 函数的实现
+sumlist:    
+        pushl   %ebp
+        rrmovl  %esp ,%ebp
+        xorl    %eax,%eax       #the return val  = 0
+        mrmovl  8(%ebp) , %edx
+        andl    %edx , %edx     #ls == 0 ?
+        je  End                          
+Loop:   mrmovl  (%edx) , %ecx       #ls->val  ==> %ecx
+        addl    %ecx , %eax         #val += ls->val
+        irmovl  $4 , %edi      
+        addl    %edi , %edx         #next ==> edx
+        mrmovl (%edx),  %esi        
+        rrmovl  %esi , %edx         #ls->next ==>edx
+        andl    %edx , %edx         #set condition codes
+        jne Loop                    #if ls != 0 goto Loop
+
+End:    rrmovl  %ebp , %esp
+        popl    %ebp
+        ret     
+
+#定义栈的起始地址
+        .pos 0x100
+Stack:
+
