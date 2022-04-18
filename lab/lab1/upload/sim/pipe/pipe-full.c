@@ -1,4 +1,4 @@
-char simname[] = "Y86 Processor: pipe-std.hcl";
+char simname[] = "Y86 Processor: pipe-full.hcl";
 #include <stdio.h>
 #include "isa.h"
 #include "pipeline.h"
@@ -31,7 +31,8 @@ int gen_instr_valid()
       (if_id_next->icode) == (I_MRMOVL) || (if_id_next->icode) == (I_ALU)
        || (if_id_next->icode) == (I_JMP) || (if_id_next->icode) == (I_CALL)
        || (if_id_next->icode) == (I_RET) || (if_id_next->icode) == 
-      (I_PUSHL) || (if_id_next->icode) == (I_POPL));
+      (I_PUSHL) || (if_id_next->icode) == (I_POPL) || (if_id_next->icode)
+       == (I_IADDL));
 }
 
 int gen_f_stat()
@@ -46,14 +47,15 @@ int gen_need_regids()
       (I_ALU) || (if_id_next->icode) == (I_PUSHL) || (if_id_next->icode)
        == (I_POPL) || (if_id_next->icode) == (I_IRMOVL) || 
       (if_id_next->icode) == (I_RMMOVL) || (if_id_next->icode) == 
-      (I_MRMOVL));
+      (I_MRMOVL) || (if_id_next->icode) == (I_IADDL));
 }
 
 int gen_need_valC()
 {
     return ((if_id_next->icode) == (I_IRMOVL) || (if_id_next->icode) == 
       (I_RMMOVL) || (if_id_next->icode) == (I_MRMOVL) || 
-      (if_id_next->icode) == (I_JMP) || (if_id_next->icode) == (I_CALL));
+      (if_id_next->icode) == (I_JMP) || (if_id_next->icode) == (I_CALL) || 
+      (if_id_next->icode) == (I_IADDL));
 }
 
 int gen_f_predPC()
@@ -74,19 +76,21 @@ int gen_d_srcA()
 int gen_d_srcB()
 {
     return (((if_id_curr->icode) == (I_ALU) || (if_id_curr->icode) == 
-        (I_RMMOVL) || (if_id_curr->icode) == (I_MRMOVL)) ? (if_id_curr->rb)
-       : ((if_id_curr->icode) == (I_PUSHL) || (if_id_curr->icode) == 
-        (I_POPL) || (if_id_curr->icode) == (I_CALL) || (if_id_curr->icode)
-         == (I_RET)) ? (REG_ESP) : (REG_NONE));
+        (I_RMMOVL) || (if_id_curr->icode) == (I_MRMOVL) || 
+        (if_id_curr->icode) == (I_IADDL)) ? (if_id_curr->rb) : (
+        (if_id_curr->icode) == (I_PUSHL) || (if_id_curr->icode) == (I_POPL)
+         || (if_id_curr->icode) == (I_CALL) || (if_id_curr->icode) == 
+        (I_RET)) ? (REG_ESP) : (REG_NONE));
 }
 
 int gen_d_dstE()
 {
     return (((if_id_curr->icode) == (I_RRMOVL) || (if_id_curr->icode) == 
-        (I_IRMOVL) || (if_id_curr->icode) == (I_ALU)) ? (if_id_curr->rb) : 
-      ((if_id_curr->icode) == (I_PUSHL) || (if_id_curr->icode) == (I_POPL)
-         || (if_id_curr->icode) == (I_CALL) || (if_id_curr->icode) == 
-        (I_RET)) ? (REG_ESP) : (REG_NONE));
+        (I_IRMOVL) || (if_id_curr->icode) == (I_ALU) || (if_id_curr->icode)
+         == (I_IADDL)) ? (if_id_curr->rb) : ((if_id_curr->icode) == 
+        (I_PUSHL) || (if_id_curr->icode) == (I_POPL) || (if_id_curr->icode)
+         == (I_CALL) || (if_id_curr->icode) == (I_RET)) ? (REG_ESP) : 
+      (REG_NONE));
 }
 
 int gen_d_dstM()
@@ -122,8 +126,9 @@ int gen_aluA()
     return (((id_ex_curr->icode) == (I_RRMOVL) || (id_ex_curr->icode) == 
         (I_ALU)) ? (id_ex_curr->vala) : ((id_ex_curr->icode) == (I_IRMOVL)
          || (id_ex_curr->icode) == (I_RMMOVL) || (id_ex_curr->icode) == 
-        (I_MRMOVL)) ? (id_ex_curr->valc) : ((id_ex_curr->icode) == (I_CALL)
-         || (id_ex_curr->icode) == (I_PUSHL)) ? -4 : ((id_ex_curr->icode) == 
+        (I_MRMOVL) || (id_ex_curr->icode) == (I_IADDL)) ? 
+      (id_ex_curr->valc) : ((id_ex_curr->icode) == (I_CALL) || 
+        (id_ex_curr->icode) == (I_PUSHL)) ? -4 : ((id_ex_curr->icode) == 
         (I_RET) || (id_ex_curr->icode) == (I_POPL)) ? 4 : 0);
 }
 
@@ -132,9 +137,10 @@ int gen_aluB()
     return (((id_ex_curr->icode) == (I_RMMOVL) || (id_ex_curr->icode) == 
         (I_MRMOVL) || (id_ex_curr->icode) == (I_ALU) || (id_ex_curr->icode)
          == (I_CALL) || (id_ex_curr->icode) == (I_PUSHL) || 
-        (id_ex_curr->icode) == (I_RET) || (id_ex_curr->icode) == (I_POPL))
-       ? (id_ex_curr->valb) : ((id_ex_curr->icode) == (I_RRMOVL) || 
-        (id_ex_curr->icode) == (I_IRMOVL)) ? 0 : 0);
+        (id_ex_curr->icode) == (I_RET) || (id_ex_curr->icode) == (I_POPL)
+         || (id_ex_curr->icode) == (I_IADDL)) ? (id_ex_curr->valb) : (
+        (id_ex_curr->icode) == (I_RRMOVL) || (id_ex_curr->icode) == 
+        (I_IRMOVL)) ? 0 : 0);
 }
 
 int gen_alufun()
@@ -145,11 +151,12 @@ int gen_alufun()
 
 int gen_set_cc()
 {
-    return ((((id_ex_curr->icode) == (I_ALU)) & !((mem_wb_next->status) == 
-          (STAT_ADR) || (mem_wb_next->status) == (STAT_INS) || 
-          (mem_wb_next->status) == (STAT_HLT))) & !((mem_wb_curr->status)
-         == (STAT_ADR) || (mem_wb_curr->status) == (STAT_INS) || 
-        (mem_wb_curr->status) == (STAT_HLT)));
+    return ((((id_ex_curr->icode) == (I_ALU) || (id_ex_curr->icode) == 
+          (I_IADDL)) & !((mem_wb_next->status) == (STAT_ADR) || 
+          (mem_wb_next->status) == (STAT_INS) || (mem_wb_next->status) == 
+          (STAT_HLT))) & !((mem_wb_curr->status) == (STAT_ADR) || 
+        (mem_wb_curr->status) == (STAT_INS) || (mem_wb_curr->status) == 
+        (STAT_HLT)));
 }
 
 int gen_e_valA()

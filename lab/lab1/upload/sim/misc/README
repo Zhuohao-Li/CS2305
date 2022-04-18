@@ -26,8 +26,15 @@ unix> make
 Makefile		Builds yas, yis, hcl2c, hcl2v
 README			This file
 
+* Versions of Makefile in the student's distribution
+* (Instructor distribution only)
+Makefile-sim	
+
 * Example programs for Part A of the CS:APP Architecture Lab
 examples.c		C versions of three Y86 functions 
+ans-copy.ys		Solution copy function (instructor distribution only)
+ans-sum.ys		Solution sum function (instructor distribution only)
+ans-rsum.ys		Solution rsum function (instructor distribution only)
 
 
 * Instruction simulator code shared by yas, yis, ssim, ssim+, and psim
@@ -54,5 +61,12 @@ lex.yy.c		HCL lexical scanner generated from hcl.lex
 hcl.y			HCL grammar
 hcl.tab.c		HCL parser generated from hcl.y
 hcl.tab.h		Token definitions
+
+* Example HCL programs used during the writing of the CS:APP book
+* (Instructor distribution only)
+frag.{hcl,c}
+mux4.{hcl,c}
+reg-file.{hcl,c}
+test.hcl
 
 

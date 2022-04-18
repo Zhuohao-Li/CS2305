@@ -523,9 +523,6 @@ int find_symbol(char *name)
 int yywrap()
 {
     int i;
-    if (tcount > 0) {
-	fail("Missing end-of-line on final line\n");
-    }
     if (verbose && pass > 1) {
 	printf("Symbol Table:\n");
 	for (i = INIT_CNT; i < symbol_cnt; i++)

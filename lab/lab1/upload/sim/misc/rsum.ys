@@ -1,3 +1,14 @@
+/*
+ * @Author: [Zhuohao Lee]
+ * @Date: 2022-04-09 00:28:48
+ * @LastEditors: [Zhuohao Lee]
+ * @LastEditTime: 2022-04-17 21:25:37
+ * @FilePath: /Arch/arch_lab1_zhuohaoli/sim/misc/rsum.ys
+ * @Description: edith_lzh@sjtu.edu.cn
+ * yes
+ * Copyright (c) 2022 by Zhuohao Lee, All Rights Reserved. 
+ */
+
 # Execution begins at address 0
 	.pos	0
 init: 	irmovl 	Stack, %esp

@@ -6,7 +6,9 @@
  * without permission.
  ***********************************************************************/ 
 
-This directory contains the student distribution of the Y86 tools.
+This directory contains the student distribution of the Y86 tools.  It
+is a proper subset of the master distribution, minus the solution
+files found in the master distribution.
 
 yas		Y86 assembler
 yis		Y86 instruction (ISA) simulator 

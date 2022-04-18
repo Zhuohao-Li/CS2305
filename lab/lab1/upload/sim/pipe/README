@@ -79,7 +79,7 @@ Makefile-sim		Makefile for the student distribution
 README			This file
 
 **********************************************
-* Files related to the Project2
+* Files related to the CS:APP Architecture Lab
 **********************************************
 
 * Sample programs
@@ -92,6 +92,9 @@ ldriver.ys		Driver that calls ncopy.ys on a longer (63-word) array
 			Both drivers are generated automatically by the
 			Makefile by typing "make drivers".
 
+* Solution files (Instructors only)
+gen-ncopy.pl	        Generates versions of benchmark program with various
+		        optimizations.  See comments in file for explanation.
 
 * Testing scripts
 gen-driver.pl		Generate a driver program for an arbitrary ncopy 
@@ -124,6 +127,13 @@ pipe-btfnt.hcl		4.55: Implement back-taken forward-not-taken strategy
 pipe-lf.hcl		4.56: Implement load forwarding logic
 pipe-1w.hcl		4.57: Implement single ported register file
 
+* HCL solution files for the CS:APP Homework Problems (Instructors only)
+pipe-nobypass-ans.hcl	4.51 solution
+pipe-full-ans.hcl	4.52-53 solutions
+pipe-nt-ans.hcl		4.54 solution
+pipe-btfnt-ans.hcl	4.55 solution
+pipe-lf-ans.hcl		4.56 solutions
+pipe-1w-ans.hcl		4.57 solutions
 
 *****************************
 * PIPE simulator source files

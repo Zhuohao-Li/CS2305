@@ -1030,7 +1030,7 @@ void set_memory(int addr, int val) {
     /* First see if we need to expand memory range */
     if (memCnt == 0) {
 	nminAddr = addr;
-	nmemCnt = 4;
+	memCnt = 4;
     } else if (addr < minAddr) {
 	nminAddr = addr;
 	nmemCnt = minAddr + memCnt - addr;
