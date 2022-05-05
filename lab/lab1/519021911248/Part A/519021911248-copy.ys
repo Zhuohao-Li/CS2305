@@ -1,0 +1,77 @@
+/*
+ * @Author: [Zhuohao Lee]
+ * @Date: 2022-04-09 00:28:48
+ * @LastEditors: [Zhuohao Lee]
+ * @LastEditTime: 2022-04-24 20:41:33
+ * @FilePath: /519021911248/Part A/519021911248-copy.ys
+ * @Description: 
+ *
+ * this file implement copy.ys. C program is in example.c, which copies a block in original sequence
+ * copy_block is the main function block in this part.
+ * loop implement iteration
+ *
+ * Copyright (c) 2022 by Zhuohao Lee, All Rights Reserved. 
+ */
+
+	.pos 	0
+init:	irmovl	Stack,	%esp
+	irmovl 	Stack,	%ebp
+	call	Main
+	halt
+
+.align 4
+# Source block
+src:
+       	 .long 0x00a
+      	 .long 0x0b0
+      	 .long 0xc00
+# Destination block
+dest:
+     	 .long 0x111
+    	 .long 0x222
+    	 .long 0x333
+
+Main:	
+	pushl	%ebp     
+	rrmovl 	%esp , %ebp
+	irmovl	$12 , %esi
+	subl	%esi , %esp
+	irmovl	src , %eax
+	rmmovl	%eax , (%esp)
+	irmovl	dest , %eax
+	rmmovl %eax , 4(%esp)
+	irmovl	$3, %eax
+	rmmovl %eax, 8(%esp)
+	call	copy_block
+	irmovl	$12 , %esi
+	addl	%esi , %esp 
+	popl	%ebp
+	ret	
+
+copy_block:
+	pushl	%ebp 			# enter
+	rrmovl	%esp, %ebp		
+	xorl	%eax , %eax		# %eax=result=0
+	
+	mrmovl	12(%ebp) , %edx	#edx <==>dest
+	mrmovl	8(%ebp) , %esi		#esi <==> src
+	mrmovl	16(%ebp),%ecx		#ecx <==> len
+	andl	%ecx, %ecx      # len > 0?
+	je	End
+Loop:	
+	mrmovl	 (%esi) , %ebx
+	rmmovl  %ebx , (%edx)
+	xorl 	%ebx , %eax
+	irmovl	$4 ,  %edi
+	addl	%edi , %edx  # val += 1
+	addl	%edi , %esi  
+	irmovl	$1,%edi		 # %edx = -1
+	subl	%edi , %ecx  # len -= 1
+	jne	Loop
+
+End:	popl	%ebp 		# restore register
+	ret
+
+	.pos	0x100
+Stack:
+

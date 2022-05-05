@@ -1,0 +1,67 @@
+/*
+ * @Author: [Zhuohao Lee]
+ * @Date: 2022-04-09 00:28:48
+ * @LastEditors: [Zhuohao Lee]
+ * @LastEditTime: 2022-04-24 19:40:04
+ * @FilePath: /519021911248/Part A/519021911248-rsum.ys
+ * @Description: edith_lzh@sjtu.edu.cn
+ * 
+ * Mimicking C functions, division of functional areas with enough and clear label
+ * rsum.ys is similar to sum.ys
+ * 
+ * Copyright (c) 2022 by Zhuohao Lee, All Rights Reserved. 
+ */
+
+# Execution begins at address 0
+	.pos	0
+init: 	irmovl 	Stack, %esp
+	irmovl	Stack, %ebp
+	call	Main
+	halt
+
+# Sample linked list
+	.align 	4
+ele1:	
+	.long 	0x00a
+        	.long 	ele2
+ele2:	
+	 .long 	0x0b0
+	 .long 	ele3
+ele3:	
+	 .long	 0xc00
+	.long 	0
+
+Main:	pushl	%ebp
+	rrmovl	%esp , %ebp
+	irmovl	ele1 , %eax
+	pushl 	%eax
+	call	rsum_list
+	rrmovl 	%ebp , %esp
+	popl 	%ebp
+	ret
+
+rsum_list:
+	pushl	%ebp        # enter
+	rrmovl	%esp , %ebp  
+	pushl	%ebx		# save %ebx
+	irmovl	$4 , %esi	
+	subl	%esi , %esp
+	xorl 	%eax , %eax # clear eax
+	mrmovl	8(%ebp),%edx# get ls
+	andl	%edx , %edx # ls == NULL?
+	je	End             # yes -> End
+	mrmovl (%edx) , %ebx# mov ls -> val to %ebx
+	irmovl	$4 , %esi
+	addl	%esi , %edx # push ls -> next
+	mrmovl (%edx) , %edi
+	rmmovl	%edi , (%esp)#leave
+	call	rsum_list
+	addl	%ebx , %eax # ret = val + ret
+
+End:	addl	%esi , %esp
+	popl	%ebx   		# restore %ebx
+	popl 	%ebp
+	ret
+
+	.pos 0x100
+Stack:
