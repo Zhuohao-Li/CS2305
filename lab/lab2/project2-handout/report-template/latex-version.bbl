@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{bryant2003computer}
+Randal~E Bryant, O'Hallaron David~Richard, and O'Hallaron David~Richard.
+\newblock {\em Computer systems: a programmer's perspective}, volume~2.
+\newblock Prentice Hall Upper Saddle River, 2003.
+
+\bibitem{lecture}
+lab~lecture CMU.
+\newblock
+  http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/recitations/rec07.pdf.
+
+\bibitem{zhihu}
+https://zhuanlan.zhihu.com/p/387662272.
+\newblock Zhihu: optimal resolution in cachelab.
+
+\bibitem{sanchez2013zsim}
+Daniel Sanchez and Christos Kozyrakis.
+\newblock Zsim: Fast and accurate microarchitectural simulation of
+  thousand-core systems.
+\newblock {\em ACM SIGARCH Computer architecture news}, 41(3):475--486, 2013.
+
+\end{thebibliography}
