@@ -1,4 +1,4 @@
-# Dawson's Lee's Lecture Notes
+# SJTU CS2305
 
 This repo contains my notes for CS2305
 
